@@ -2,6 +2,7 @@
  * Abstract class that can represent any smart device with a particular purpose.
  *
  * @author June Pyle
+ * @author Min Lee
  * @version 1.0
  */
 public abstract class IDevice
@@ -46,7 +47,7 @@ public abstract class IDevice
      * Determines whether this IDevice is equal to a given object. IDevices can only be equal to other non-null
      * IDevices. IDevices are considered equal if and only if their purposes are the same.
      *
-     * @param o   the reference object with which to compare
+     * @param o the reference object with which to compare
      * @return true if o is an IDevice with an equal purpose to this one, false otherwise
      */
     @Override
@@ -57,7 +58,8 @@ public abstract class IDevice
             return false;
         }
 
-        if (!(o instanceof final IDevice other)) {
+        if (!(o instanceof final IDevice other))
+        {
             return false;
         }
 

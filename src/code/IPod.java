@@ -2,6 +2,7 @@
  * Represents an IPod, which is an IDevice for the purpose of listening to music.
  *
  * @author June Pyle
+ * @author Min Lee
  * @version 1.0
  */
 public class IPod extends IDevice
@@ -46,7 +47,7 @@ public class IPod extends IDevice
      * @return A String with the IPod's:
      * - Purpose
      * - Number of songs stored
-     * - Maximum number in decibels
+     * - Maximum volume in decibels
      */
     @Override
     public String toString()
@@ -71,7 +72,7 @@ public class IPod extends IDevice
      * Determines whether this IPod is equal to a given object. IPods can only be equal to other non-null
      * IPods. IPods are considered equal if and only if they have the same number of songs stored on them.
      *
-     * @param o   the reference object with which to compare
+     * @param o the reference object with which to compare
      * @return true if o is an IPod with the same amount of songs stored on it as this one, false otherwise
      */
     @Override
@@ -82,7 +83,8 @@ public class IPod extends IDevice
             return false;
         }
 
-        if (!(o instanceof final IPod other)) {
+        if (!(o instanceof final IPod other))
+        {
             return false;
         }
 
