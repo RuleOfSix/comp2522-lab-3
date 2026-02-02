@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab03;
+
 import java.util.Objects;
 
 /**

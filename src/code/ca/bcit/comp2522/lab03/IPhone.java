@@ -1,4 +1,4 @@
-import java.util.Objects;
+package ca.bcit.comp2522.lab03;
 
 /**
  * Represents an IPhone, which is an IDevice for the purpose of talking.

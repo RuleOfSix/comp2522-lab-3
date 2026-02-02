@@ -1,13 +1,20 @@
+package ca.bcit.comp2522.lab03;
+
 /**
  * Driver class to test the IDevice and its child classes.
  *
  * @author June Pyle
  * @author Min Lee
- *
  * @version 1.0.0
  */
 public class Main
 {
+
+    /**
+     * Drives the program.
+     *
+     * @param args command-line arguments (unused).
+     */
     public static void main(final String[] args)
     {
         // Create IPod objects
@@ -30,23 +37,50 @@ public class Main
         final IPhone17 iphone17_2;
         final IPhone17 iphone17_3;
 
+        ipod1 = new IPod(300,
+                         80.0); // 300 songs, max volume 80.0 dB
 
-        ipod1 = new IPod(300, 80.0); // 300 songs, max volume 80.0 dB
-        ipod2 = new IPod(400, 85.0); // 400 songs, max volume 85.0 dB
-        ipod3 = new IPod(300, 70.0); // 300 songs, max volume 70.0 dB
+        ipod2 = new IPod(400,
+                         85.0); // 400 songs, max volume 85.0 dB
 
-        ipad1 = new IPad(true, "iPadOS 15"); // Has case, OS version iPadOS 15
-        ipad2 = new IPad(false, "iPadOS 14"); // No case, OS version iPadOS 14
-        ipad3 = new IPad(true, "iPadOS 15"); // Has case, OS version iPadOS 15
+        ipod3 = new IPod(300,
+                         70.0); // 300 songs, max volume 70.0 dB
 
-        iphone1 = new IPhone(120.0, "Verizon"); // 120 minutes, carrier Verizon
-        iphone2 = new IPhone(180.0, "T-Mobile"); // 180 minutes, carrier T-Mobile
-        iphone3 = new IPhone(120.0, "AT&T"); // 120 minutes, carrier AT&T
 
-        iphone17_1 = new IPhone17(100.0, "Verizon", true, 512); // 100 minutes, high-res camera, 512 GB
-        iphone17_2 = new IPhone17(100.0, "Verizon", true, 256); // 100 minutes, high-res camera, 256 GB
-        iphone17_3 = new IPhone17(100.0, "Verizon", false, 512); // 100 minutes, no high-res camera, 512 GB
+        ipad1 = new IPad(true,
+                         "iPadOS 15"); // Has case, OS version iPadOS 15
 
+        ipad2 = new IPad(false,
+                         "iPadOS 14"); // No case, OS version iPadOS 14
+
+        ipad3 = new IPad(true,
+                         "iPadOS 15"); // Has case, OS version iPadOS 15
+
+
+        iphone1 = new IPhone(120.0,
+                             "Verizon"); // 120 minutes, carrier Verizon
+
+        iphone2 = new IPhone(180.0,
+                             "T-Mobile"); // 180 minutes, carrier T-Mobile
+
+        iphone3 = new IPhone(120.0,
+                             "AT&T"); // 120 minutes, carrier AT&T
+
+
+        iphone17_1 = new IPhone17(100.0,
+                                  "Verizon",
+                                  true,
+                                  512); // 100 minutes, high-res camera, 512 GB
+
+        iphone17_2 = new IPhone17(100.0,
+                                  "Verizon",
+                                  true,
+                                  256); // 100 minutes, high-res camera, 256 GB
+
+        iphone17_3 = new IPhone17(100.0,
+                                  "Verizon",
+                                  false,
+                                  512); // 100 minutes, no high-res camera, 512 GB
 
         // Test equality and inequality for IPod
         System.out.println("IPod Equality Test:");
