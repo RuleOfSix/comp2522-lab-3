@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab03;
+
 /**
  * Represents an IPod, which is an IDevice for the purpose of listening to music.
  *

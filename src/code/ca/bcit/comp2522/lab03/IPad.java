@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab03;
+
 /**
  * Represents an IPad, which is an IDevice for the purpose of learning.
  *

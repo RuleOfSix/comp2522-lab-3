@@ -1,3 +1,5 @@
+package ca.bcit.comp2522.lab03;
+
 /**
  * Abstract class that can represent any smart device with a particular purpose.
  *
