@@ -5,13 +5,14 @@ package ca.bcit.comp2522.lab03;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0
  */
 public abstract class IDevice
 {
     private final String purpose;
 
-    protected IDevice(final String purpose)
+    public IDevice(final String purpose)
     {
         validatePurpose(purpose);
 

@@ -5,6 +5,7 @@ package ca.bcit.comp2522.lab03;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0.0
  */
 public class IPhone extends IDevice
@@ -156,7 +157,10 @@ public class IPhone extends IDevice
     }
 
 
-    // Validates remaining minutes on plan , which cannot be less than MIN_REAMINING_PLAN_MINUTES.
+    /**
+     * Validates remaining minutes on plan , which cannot be less than MIN_REAMINING_PLAN_MINUTES.
+     * @param remainingPlanMinutes the number of minutes on phone plan.
+     */
     private static void validateRemainingPlanMinutes(final double remainingPlanMinutes)
     {
         if (remainingPlanMinutes < MIN_REMAINING_PLAN_MINUTES)
@@ -167,7 +171,10 @@ public class IPhone extends IDevice
         }
     }
 
-    // Validate the carrier of IPhone, which cannot be null or blank.
+    /**
+     * Validate the carrier of IPhone, which cannot be null or blank.
+     * @param carrier the name of carrier
+     */
     private static void validateCarrier(final String carrier)
     {
         if (carrier == null ||

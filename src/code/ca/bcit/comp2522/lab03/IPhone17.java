@@ -7,6 +7,7 @@ import java.util.Objects;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0.0
  */
 public class IPhone17 extends IPhone
@@ -161,7 +162,10 @@ public class IPhone17 extends IPhone
     }
 
 
-    // Validates the gigabytes of memory of IPhone17 , which cannot be less than MIN_MEMORY_GB
+    /**
+     * Validates the gigabytes of memory of IPhone17 , which cannot be less than MIN_MEMORY_GB
+     * @param memoryGB the gigabytes of memory of IPhone17
+     */
     private static void validateMemoryGB(final int memoryGB)
     {
         if (memoryGB < MIN_MEMORY_GB)
