@@ -50,7 +50,7 @@ public class IPhone17 extends IPhone
      *
      * @return A String with the IPhone17's:
      * - highResolutionCamera
-     * - Gigabytes of memory
+     * - gigabytes of memory
      */
     @Override
     public String toString()
