@@ -148,7 +148,11 @@ public class IPod extends IDevice
         this.maxVolumeDb = maxVolumeDb;
     }
 
-    // Validates the number of songs stored on the IPod, which cannot be less than MIN_SONGS_STORED
+    /*
+     * Validates the number of songs stored on the IPod, which cannot be less than MIN_SONGS_STORED
+     *
+     * @param number of songs to validate
+     */
     private static void validateSongsStored(final int songsStored)
     {
         if (songsStored < MIN_SONGS_STORED)
@@ -157,7 +161,11 @@ public class IPod extends IDevice
         }
     }
 
-    // Validates the maximum volume in decibels, which cannot be less than MIN_MAX_VOLUME_DB
+    /*
+     * Validates the maximum volume in decibels, which cannot be less than MIN_MAX_VOLUME_DB
+     *
+     * @param maxVolumeDb maximum volume value to validate, in decibels
+     */
     private static void validateMaxVolumeDb(final double maxVolumeDb)
     {
         if (maxVolumeDb < MIN_MAX_VOLUME_DB)

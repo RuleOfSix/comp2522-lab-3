@@ -86,7 +86,11 @@ abstract class IDevice
         return this.purpose.hashCode();
     }
 
-    // Validates a purpose, which must not be null.
+    /*
+     * Validates a purpose, which cannot be null.
+     *
+     * @param purpose the purpose string to validate
+     */
     private static void validatePurpose(final String purpose)
     {
         if (purpose == null)

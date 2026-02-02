@@ -151,6 +151,8 @@ public class IPad extends IDevice
     /*
      * Validates the operating system version of the IPad. A String is a valid operating system version if
      * it is not null and not blank (that is, it must have non-whitespace characters).
+     *
+     * @param operatingSystemVersion the operating system version to validate
      */
     private static void validateOperatingSystemVersion(final String operatingSystemVersion)
     {
