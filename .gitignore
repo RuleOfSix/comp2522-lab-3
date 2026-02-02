@@ -28,3 +28,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Java 컴파일 결과물 (가장 중요)
+*.class
+
+# 로그 파일
+*.log
+
+# 패키지/빌드 아카이브
+*.jar
+*.war
