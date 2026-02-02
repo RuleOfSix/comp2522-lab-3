@@ -5,15 +5,12 @@ import java.util.Objects;
  *
  * @author June Pyle
  * @author Min Lee
- *
  * @version 1.0.0
  */
 public class IPhone extends IDevice
 {
     private static final String PURPOSE = "talking";
     private static final double MIN_REMAINING_PLAN_MINUTES = 0.0;
-//    private static final int EQUAL_RESULT = 0;
-
 
     private double remainingPlanMinutes;
     private String carrier;
@@ -25,7 +22,7 @@ public class IPhone extends IDevice
      * @param carrier              the name of carrier
      */
     public IPhone(final double remainingPlanMinutes,
-                     final String carrier)
+                  final String carrier)
     {
         super(PURPOSE);
 
@@ -50,9 +47,9 @@ public class IPhone extends IDevice
      * Generates a String representation of the IPhone, containing all of its fields.
      *
      * @return A String with the IPhone's:
-     * - Purpose
-     * - carrier
-     * - minutes remaining on phone plan
+     *         - Purpose
+     *         - carrier
+     *         - minutes remaining on phone plan
      */
     @Override
     public String toString()
@@ -81,7 +78,7 @@ public class IPhone extends IDevice
      * @return true if o is an IPhone with the same amount of minutes remaining, false otherwise
      */
     @Override
-    public boolean equals (final Object o)
+    public boolean equals(final Object o)
     {
         if (o == null)
         {
@@ -93,8 +90,14 @@ public class IPhone extends IDevice
             return false;
         }
 
-        //return Double.compare(this.remainingPlanMinutes, other.getRemainingPlanMinutes()) == EQUAL_RESULT;
-        return this.remainingPlanMinutes == other.getRemainingPlanMinutes();
+        /*
+         * We're boxing the remainingPlanMinutes value in order to use Double.equals(), which respects the
+         * .equals() contract by being a true equivalence relation (it has the reflexive, transitive, symmetric,
+         * and substitution properties).
+         */
+        final Double remainingPlanMinutes = this.remainingPlanMinutes;
+
+        return remainingPlanMinutes.equals(other.getRemainingPlanMinutes());
     }
 
     /**
@@ -105,7 +108,7 @@ public class IPhone extends IDevice
     @Override
     public int hashCode()
     {
-        return Objects.hash(remainingPlanMinutes);
+        return Double.hashCode(remainingPlanMinutes);
     }
 
     /**
@@ -158,7 +161,9 @@ public class IPhone extends IDevice
     {
         if (remainingPlanMinutes < MIN_REMAINING_PLAN_MINUTES)
         {
-            throw new IllegalArgumentException("Invalid number of minutes remaining on phone plan: " + remainingPlanMinutes);
+            throw new IllegalArgumentException(
+                "Invalid number of minutes remaining on phone plan: " +
+                remainingPlanMinutes);
         }
     }
 
@@ -166,7 +171,7 @@ public class IPhone extends IDevice
     private static void validateCarrier(final String carrier)
     {
         if (carrier == null ||
-                carrier.isBlank())
+            carrier.isBlank())
         {
             throw new IllegalArgumentException("Invalid carrier");
         }

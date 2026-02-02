@@ -5,36 +5,37 @@ import java.util.Objects;
  *
  * @author June Pyle
  * @author Min Lee
- *
  * @version 1.0.0
  */
 public class IPhone17 extends IPhone
 {
-   private static final int MIN_MEMORY_GB = 0;
+    private static final int MIN_MEMORY_GB = 0;
 
-   private boolean highResolutionCamera;
-   private int memoryGB;
+    private boolean highResolutionCamera;
+    private int memoryGB;
 
     /**
      * Constructs a new IPhone17 with the given parameters with valid memory.
      *
-     * @param remainingPlanMinutes the number of minutes remaining on phone plan for IPhone
-     * @param carrier              the name of carrier
+     * @param remainingPlanMinutes the number of minutes remaining on phone plan for the IPhone17
+     * @param carrier              the name of the IPhone17's carrier
      * @param highResolutionCamera true if the IPhone17 has a camera, false otherwise
-     * @param memoryGB       the gigabytes of memory of IPhone17
+     * @param memoryGB             the gigabytes of memory of IPhone17
      */
-     public IPhone17(final double remainingPlanMinutes,
-                     final String carrier,
-                     final boolean highResolutionCamera,
-                     final int memoryGB)
-     {
-         super(remainingPlanMinutes, carrier);
+    public IPhone17(final double remainingPlanMinutes,
+                    final String carrier,
+                    final boolean highResolutionCamera,
+                    final int memoryGB)
+    {
+        super(remainingPlanMinutes,
+              carrier);
 
-         this.highResolutionCamera = highResolutionCamera;
+        // All possible values of highResolutionCamera are valid
+        validateMemoryGB(memoryGB);
 
-         validateMemoryGB(memoryGB);
-         this.memoryGB = memoryGB;
-     }
+        this.highResolutionCamera = highResolutionCamera;
+        this.memoryGB = memoryGB;
+    }
 
     /**
      * Prints the IPhone17's details to the console (see toString for specifics).
@@ -78,11 +79,11 @@ public class IPhone17 extends IPhone
      *
      * @param o the reference object with which to compare
      * @return true if o is an IPhone17 with the same amount of minutes remaining, and
-     *         same value for high-resolution camera,
-     *         false otherwise.
+     * same value for high-resolution camera,
+     * false otherwise.
      */
     @Override
-    public boolean equals (final Object o)
+    public boolean equals(final Object o)
     {
         if (o == null)
         {
@@ -111,7 +112,8 @@ public class IPhone17 extends IPhone
     @Override
     public int hashCode()
     {
-        return Objects.hash(super.getRemainingPlanMinutes(), highResolutionCamera);
+        return Objects.hash(super.getRemainingPlanMinutes(),
+                            highResolutionCamera);
     }
 
     /**
@@ -148,10 +150,11 @@ public class IPhone17 extends IPhone
     /**
      * Mutator for high-resolution camera
      *
-     * @param highResolutionCamera  true to newly indicate IPhone17 has a camera, false otherwise.
+     * @param highResolutionCamera true to newly indicate IPhone17 has a camera, false otherwise.
      */
     public final void setHighResolutionCamera(final boolean highResolutionCamera)
     {
+        // All possible values of high resolution camera are valid
         this.highResolutionCamera = highResolutionCamera;
     }
 
