@@ -96,7 +96,8 @@ public class IPhone extends IDevice
          * .equals() contract by being a true equivalence relation (it has the reflexive, transitive, symmetric,
          * and substitution properties).
          */
-        final Double remainingPlanMinutes = this.remainingPlanMinutes;
+        final Double remainingPlanMinutes;
+        remainingPlanMinutes = this.remainingPlanMinutes;
 
         return remainingPlanMinutes.equals(other.getRemainingPlanMinutes());
     }
