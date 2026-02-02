@@ -5,12 +5,18 @@ package ca.bcit.comp2522.lab03;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0
  */
-public abstract class IDevice
+abstract class IDevice
 {
     private final String purpose;
 
+    /**
+     * Constructs an IDevice with the given purpose.
+     *
+     * @param purpose a String describing the purpose of the IDevice.
+     */
     protected IDevice(final String purpose)
     {
         validatePurpose(purpose);

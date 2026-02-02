@@ -7,6 +7,7 @@ import java.util.Objects;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0.0
  */
 public class IPhone17 extends IPhone

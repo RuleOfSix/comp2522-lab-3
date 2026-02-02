@@ -5,6 +5,7 @@ package ca.bcit.comp2522.lab03;
  *
  * @author June Pyle
  * @author Min Lee
+ *
  * @version 1.0.0
  */
 public class IPad extends IDevice
